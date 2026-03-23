@@ -3,7 +3,7 @@ pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   articles/how-to-study-removal-lists: how-to-study-removal-lists.html
-last_built: 2026-03-23T18:22Z
+last_built: 2026-03-23T18:25Z
 urls:
   reference: https://brsantos.github.io/ocmse/reference
   article: https://brsantos.github.io/ocmse/articles
