@@ -371,3 +371,68 @@ defining the number of cores with the argument `mc.cores`.
 ``` r
 simulations <- parallel::mclapply(1:50, sim_mse, mc.cores = 5)
 ```
+
+## Collecting results and plotting
+
+After running the simulations, we can gather the relative means and
+credible intervals from each replicate and create a quick summary plot.
+Below, we stack all results into data frames and make a boxplot of the
+relative means (values around 1 indicate estimates close to the true
+value).
+
+``` r
+scenarios <- c("All lists", "Remove X", "Remove Y", "Remove Z")
+
+results_mean <- do.call(
+  rbind,
+  lapply(seq_along(simulations), function(i) {
+    data.frame(
+      sim = i,
+      scenario = scenarios,
+      rel_mean = simulations[[i]]$relat_mean
+    )
+  })
+)
+
+library(ggplot2)
+
+ggplot(results_mean, aes(x = scenario, y = rel_mean)) +
+  geom_boxplot(fill = "grey85") +
+  geom_hline(yintercept = 1, linetype = 2, color = "red") +
+  labs(x = "", y = "Relative mean (estimate / true)") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 15, hjust = 1))
+```
+
+If we also want to visualise the average 95% credible intervals across
+replicates, we can summarize the lower and upper bounds and plot them as
+error bars:
+
+``` r
+results_q <- do.call(
+  rbind,
+  lapply(seq_along(simulations), function(i) {
+    data.frame(
+      sim = i,
+      scenario = scenarios,
+      rel_low = simulations[[i]]$relat_q[1, ],
+      rel_high = simulations[[i]]$relat_q[2, ]
+    )
+  })
+)
+
+summary_q <- results_q |>
+  dplyr::group_by(scenario) |>
+  dplyr::summarise(
+    mean_low = mean(rel_low),
+    mean_high = mean(rel_high),
+    .groups = "drop"
+  )
+
+ggplot(summary_q, aes(x = scenario, y = 1)) +
+  geom_hline(yintercept = 1, linetype = 2, color = "red") +
+  geom_errorbar(aes(ymin = mean_low, ymax = mean_high), width = 0.2) +
+  labs(x = "", y = "Average 95% interval (relative)") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 15, hjust = 1))
+```
