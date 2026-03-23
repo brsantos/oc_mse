@@ -1,13 +1,9 @@
-Package: overcoverage
+Package: oc_mse
 Type: Package
 Title: Over-coverage estimate based on MSE models
 Version: 0.1.0
 Authors@R: c(
-    person("Bruno", "Santos", , "b.santos@kent.ac.uk", role = c("aut", "cre")),
-    person("Eleni", "Matechou", , "e.matechou@kent.ac.uk", role = "aut"),
-    person("Eleonora", "Mussino", , "eleonora.mussino@sociology.su.se", role = "aut"),
-    person("Sven", "Drefahl", , "sven.drefahl@sociology.su.se", role = "aut"),
-    person("Andrea", "Monti", , "andrea.monti@sociology.su.se", role = "aut")
+    person("Bruno", "Santos", , "b.santos@kent.ac.uk", role = c("aut", "cre"))
   )
 Description: Estimation of over-coverage based on register data, 
     considering log-linear models, wrapping functions from package 'conting'.
@@ -18,7 +14,7 @@ Imports:
     conting (>= 1.7),
     tseries
 RoxygenNote: 7.2.3
-URL: https://brsantos.github.io/overcoverage/
+URL: https://brsantos.github.io/oc_mse/
 Remotes: 
     cran/conting
 Config/Needs/website: rmarkdown

@@ -26,7 +26,7 @@ For this simultation, we need to generate new population according to the same r
 The initial step is to generate the population, where we create one continuous and one categorical variable, although they will not be used for the study. The function just needs to create at least one variable of these types.
 
 ```{r}
-library(overcoverage)
+library(oc_mse)
 set.seed(42)
 main_list <- create_population(size = 1e6,
                                  n_bin_var = 3, 
@@ -110,7 +110,7 @@ freq_data <- freq_data %>%
 
 cens_ind <- which(freq_data$cens)
     
-model <- overcoverage::oc_model(
+model <- oc_mse::oc_model(
       model_formula = count ~ bin1 * X + bin2 * Y + bin3 * Z, 
       freq_table = freq_data, censored = cens_ind)
 ```
@@ -162,7 +162,7 @@ freq_data_x <- freq_data_x %>%
 
 cens_ind <- which(freq_data_x$cens)
     
-model_x <- overcoverage::oc_model(
+model_x <- oc_mse::oc_model(
       model_formula = 
         count ~ bin1 + bin2 * Y + bin3 * Z, 
       freq_table = freq_data_x, 
