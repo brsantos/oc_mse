@@ -1,42 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://brsantos.github.io/overcoverage/404.html</loc>
-  </url>
-  <url>
-    <loc>https://brsantos.github.io/overcoverage/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://brsantos.github.io/overcoverage/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://brsantos.github.io/overcoverage/articles/how-to-study-removal-lists.html</loc>
-  </url>
-  <url>
-    <loc>https://brsantos.github.io/overcoverage/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://brsantos.github.io/overcoverage/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://brsantos.github.io/overcoverage/index.html</loc>
-  </url>
-  <url>
-    <loc>https://brsantos.github.io/overcoverage/reference/create_list_out.html</loc>
-  </url>
-  <url>
-    <loc>https://brsantos.github.io/overcoverage/reference/create_list_presences.html</loc>
-  </url>
-  <url>
-    <loc>https://brsantos.github.io/overcoverage/reference/create_population.html</loc>
-  </url>
-  <url>
-    <loc>https://brsantos.github.io/overcoverage/reference/create_presences.html</loc>
-  </url>
-  <url>
-    <loc>https://brsantos.github.io/overcoverage/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://brsantos.github.io/overcoverage/reference/oc_model.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://brsantos.github.io/ocmse/404.html</loc></url>
+<url><loc>https://brsantos.github.io/ocmse/LICENSE-text.html</loc></url>
+<url><loc>https://brsantos.github.io/ocmse/LICENSE.html</loc></url>
+<url><loc>https://brsantos.github.io/ocmse/articles/how-to-study-removal-lists.html</loc></url>
+<url><loc>https://brsantos.github.io/ocmse/articles/index.html</loc></url>
+<url><loc>https://brsantos.github.io/ocmse/authors.html</loc></url>
+<url><loc>https://brsantos.github.io/ocmse/index.html</loc></url>
+<url><loc>https://brsantos.github.io/ocmse/reference/create_list_out.html</loc></url>
+<url><loc>https://brsantos.github.io/ocmse/reference/create_list_presences.html</loc></url>
+<url><loc>https://brsantos.github.io/ocmse/reference/create_population.html</loc></url>
+<url><loc>https://brsantos.github.io/ocmse/reference/create_presences.html</loc></url>
+<url><loc>https://brsantos.github.io/ocmse/reference/index.html</loc></url>
+<url><loc>https://brsantos.github.io/ocmse/reference/oc_model.html</loc></url>
 </urlset>
+
